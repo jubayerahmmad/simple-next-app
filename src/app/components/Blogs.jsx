@@ -8,7 +8,7 @@ const Blogs = async () => {
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 p-4">
       {posts.slice(0, 12).map((post, i) => (
         <Link
-          href={`/${post.id}`}
+          href={`/blog/${post.id}`}
           key={i}
           className="p-6 rounded-md border border-black shadow-md"
         >
