@@ -3,15 +3,13 @@ import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import Link from "next/link";
 
 const Navbar = async () => {
-  const { getUser, isAuthenticated } = getKindeServerSession();
-  const user = await getUser();
+  const { isAuthenticated } = getKindeServerSession();
   const isUserAuthenticated = await isAuthenticated();
-  console.log(isUserAuthenticated);
-  console.log(user);
+
   return (
-    <div className="bg-slate-950 p-4">
+    <div className="bg-slate-100 p-4">
       <nav>
-        <ul className="flex items-center justify-center gap-6">
+        <ul className="flex items-center justify-center gap-6 text-xl font-semibold">
           <li>
             <Link href="/">Home</Link>
           </li>
